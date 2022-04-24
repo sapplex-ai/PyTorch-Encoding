@@ -66,7 +66,7 @@ class BaseNet(nn.Module):
         # copying modules from pretrained models
         self.backbone = backbone
 
-        self.pretrained = get_backbone(backbone, pretrained=True, dilated=dilated,
+        self.pretrained = get_backbone(backbone, pretrained=False, dilated=dilated,
                                        norm_layer=norm_layer, root=root,
                                        *args, **kwargs)
         self.pretrained.fc = None
